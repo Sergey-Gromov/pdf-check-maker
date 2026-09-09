@@ -1,0 +1,5 @@
+[
+  {"invoice_id": "JSON-001", "product": "Блокнот", "price": "150.00", "qty": 2},
+  {"invoice_id": "JSON-001", "product": "Ручка", "price": "45.50", "qty": 5},
+  {"invoice_id": "JSON-002", "product": "Папка", "price": "120.00", "qty": 1}
+]

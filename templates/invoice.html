@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Чек {{ invoice_id }}</title>
+  <style>
+    body { color: #222; font-size: 12px; }
+    h1 { font-size: 24px; margin-bottom: 24px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td { border-bottom: 1px solid #ddd; padding: 12px; text-align: left; overflow-wrap: anywhere; }
+    th { background: #f2f2f2; }
+    tr { break-inside: avoid; }
+    .number { text-align: right; width: 22%; }
+  </style>
+</head>
+<body>
+  <h1>Товарный чек № {{ invoice_id }}</h1>
+  <table>
+    <thead><tr><th>Товар</th><th class="number">Цена, ₽</th><th class="number">Количество</th></tr></thead>
+    <tbody>
+      {% for item in items %}
+      <tr><td>{{ item.product }}</td><td class="number">{{ item.price }}</td><td class="number">{{ item.qty }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

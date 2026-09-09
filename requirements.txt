@@ -1,0 +1,2 @@
+WeasyPrint>=68,<71
+Jinja2>=3.1.6,<4
